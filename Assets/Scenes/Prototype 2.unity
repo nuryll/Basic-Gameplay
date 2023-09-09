@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &56336371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6433016718511384674, guid: 84d3c12f2a8cf974daefb80f3ae51169, type: 3}
-  m_PrefabInstance: {fileID: 3312082261630438258}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &94581433
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 56336371}
-  - {fileID: 1895133583}
-  - {fileID: 2120277619}
+  - {fileID: 6433016718511384674, guid: 84d3c12f2a8cf974daefb80f3ae51169, type: 3}
+  - {fileID: 724044604609793585, guid: 8c3779e3f73c28d45b1552274badd099, type: 3}
+  - {fileID: 2451311115489243911, guid: 210b0587e775c5349aae05e84c1f53bb, type: 3}
 --- !u!4 &94581435
 Transform:
   m_ObjectHideFlags: 0
@@ -641,7 +636,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 45
-  orthographic: 0
+  orthographic: 1
   orthographic size: 10
   m_Depth: -1
   m_CullingMask:
@@ -821,16 +816,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1895133583 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 724044604609793585, guid: 8c3779e3f73c28d45b1552274badd099, type: 3}
-  m_PrefabInstance: {fileID: 8423333671862733258}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2120277619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2451311115489243911, guid: 210b0587e775c5349aae05e84c1f53bb, type: 3}
-  m_PrefabInstance: {fileID: 4878991497291676272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1811782056665963770
 PrefabInstance:
   m_ObjectHideFlags: 0
