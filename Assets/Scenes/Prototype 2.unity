@@ -153,9 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 6433016718511384674, guid: 84d3c12f2a8cf974daefb80f3ae51169, type: 3}
-  - {fileID: 724044604609793585, guid: 8c3779e3f73c28d45b1552274badd099, type: 3}
   - {fileID: 2451311115489243911, guid: 210b0587e775c5349aae05e84c1f53bb, type: 3}
+  - {fileID: 724044604609793585, guid: 8c3779e3f73c28d45b1552274badd099, type: 3}
+  - {fileID: 6433016718511384674, guid: 84d3c12f2a8cf974daefb80f3ae51169, type: 3}
   spawnRangeY: 5
   spawnCooldown: 3
   animalSpeed: 5
