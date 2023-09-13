@@ -422,6 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fca8ebd051645a45a22f95fab4e7055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpawnPoint: {fileID: 0}
   horizontalInput: 0
   speed: 10
   xRange: 20

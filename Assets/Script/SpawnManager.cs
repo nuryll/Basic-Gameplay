@@ -6,9 +6,9 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] animalPrefabs;
     private float spawnRangeX = 20;
-    private float spawnPosZ = 20;
-
- 
+    private float spawnPosZ = 5;
+    private float sideSpawnZMin = 5;
+    private float sideSpawnZMax = 15;
 
     private float startDelay = 2;
     private float spawnInterval = 1.5f;
@@ -19,18 +19,39 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
-
-
     void SpawnRandomAnimal()
     {
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        int direction = Random.Range(0, 3); // 0: Ön, 1: Sol, 2: Sağ
+
+        Vector3 spawnPos;
+        Quaternion spawnRotation;
+
+        switch (direction)
+        {
+            case 0: // Önden hayvan çıkıyor.
+                spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+                spawnRotation = Quaternion.identity;  // Default rotasyon
+                break;
+
+            case 1: // Soldan hayvan çıkıyor.
+                spawnPos = new Vector3(-spawnRangeX, 0, Random.Range(sideSpawnZMin, sideSpawnZMax));
+                spawnRotation = Quaternion.Euler(0, 90, 0); // Sağa doğru döndürülmüş rotasyon
+                break;
+
+            case 2: // Sağdan hayvan çıkıyor.
+                spawnPos = new Vector3(spawnRangeX, 0, Random.Range(sideSpawnZMin, sideSpawnZMax));
+                spawnRotation = Quaternion.Euler(0, -90, 0); // Sola doğru döndürülmüş rotasyon
+                break;
+
+            default:
+                spawnPos = new Vector3(0, 0, 0); 
+                spawnRotation = Quaternion.identity;
+                break;
+        }
+
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
+        Instantiate(animalPrefabs[animalIndex], spawnPos, spawnRotation);
     }
 }
+
+
